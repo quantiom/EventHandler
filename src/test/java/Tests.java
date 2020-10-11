@@ -1,5 +1,3 @@
-package test;
-
 import me.quantiom.eventhandler.EventHandler;
 import me.quantiom.eventhandler.event.impl.TestEvent;
 import org.junit.Assert;
