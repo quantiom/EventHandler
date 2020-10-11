@@ -18,6 +18,21 @@ public class TestEvent extends Event {
 }
 ```
 
+### Listener Class Example
+```java
+public class SomeListener implements EventListener {
+    // will be invoked
+    @HandleEvent
+    public void onTestEvent(TestEvent event) {
+        System.out.println("Data: " + event.getData());
+    }
+    
+    // will not be invoked
+    public void onNotInvokedTestEvent(TestEvent event) {
+        System.out.println("Data: " + event.getData());
+    }
+}```
+
 #### Usage
 ```java
 // create the handler and listener instances
