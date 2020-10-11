@@ -1,34 +1,13 @@
-package me.quantiom.eventhandler.test;
+package test;
 
 import me.quantiom.eventhandler.EventHandler;
 import me.quantiom.eventhandler.event.impl.TestEvent;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
-import java.util.List;
-
-public class RunTests {
-    public static void main(String[] args) {
-        System.out.println("Running tests...");
-        Result result = JUnitCore.runClasses(RunTests.class);
-
-        List<Failure> failures = result.getFailures();
-
-        if (failures.isEmpty()) {
-            System.out.println("All tests passed. (0 failures)");
-        } else {
-            System.out.println("Tests failed, " + failures.size() + " failure(s):");
-            for (Failure failure : failures) {
-                System.out.println(failure.toString());
-            }
-        }
-    }
-
+public class Tests {
     @Test
-    public void listenerTest() {
+    public void test_listenerTest() {
         // create the handler and listener instances
         EventHandler handler = new EventHandler();
         ListenerTest testListener = new ListenerTest();
@@ -58,7 +37,7 @@ public class RunTests {
     }
 
     @Test
-    public void multipleHandlersTest() {
+    public void test_multipleHandlersTest() {
         // create the handler and listener instances
         EventHandler handler = new EventHandler();
         MultipleHandlersTest listener = new MultipleHandlersTest();

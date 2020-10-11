@@ -1,4 +1,4 @@
-package me.quantiom.eventhandler.test;
+package test;
 
 import me.quantiom.eventhandler.EventListener;
 import me.quantiom.eventhandler.HandleEvent;
