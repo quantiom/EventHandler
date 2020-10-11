@@ -1,7 +1,5 @@
 package me.quantiom.eventhandler;
 
-import me.quantiom.eventhandler.event.Event;
-
 import java.lang.reflect.Method;
 
 public class RegisteredMethod {

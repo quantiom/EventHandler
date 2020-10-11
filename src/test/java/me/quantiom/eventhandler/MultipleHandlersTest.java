@@ -1,7 +1,5 @@
 package me.quantiom.eventhandler;
 
-import me.quantiom.eventhandler.EventListener;
-import me.quantiom.eventhandler.HandleEvent;
 import me.quantiom.eventhandler.event.impl.TestEvent;
 
 public class MultipleHandlersTest implements EventListener {
