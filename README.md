@@ -31,7 +31,8 @@ public class SomeListener implements EventListener {
     public void onNotInvokedTestEvent(TestEvent event) {
         System.out.println("Data: " + event.getData());
     }
-}```
+}
+```
 
 #### Usage
 ```java
