@@ -285,7 +285,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602387075586" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602387120721" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -327,8 +327,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tests" />
+    <configuration name="EventHandlerTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EventHandlerTests" />
       <module name="EventHandler" />
       <extension name="coverage">
         <pattern>
@@ -366,7 +366,7 @@
       <list>
         <item itemvalue="JUnit.All in EventHandler" />
         <item itemvalue="JUnit.me.quantiom.eventhandler in EventHandler" />
-        <item itemvalue="Application.RunTests" />
+        <item itemvalue="Application.EventHandlerTests" />
         <item itemvalue="Application.EventHandler" />
       </list>
     </recent_temporary>

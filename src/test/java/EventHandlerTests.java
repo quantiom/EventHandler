@@ -3,7 +3,7 @@ import me.quantiom.eventhandler.event.impl.TestEvent;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Tests {
+public class EventHandlerTests {
     @Test
     public void test_listenerTest() {
         // create the handler and listener instances
