@@ -18,7 +18,7 @@ public class TestEvent extends Event {
 }
 ```
 
-### Listener Class Example
+#### Listener Class Example
 ```java
 public class SomeListener implements EventListener {
     // will be invoked
