@@ -2,26 +2,26 @@ package me.quantiom.eventhandler;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import me.quantiom.eventhandler.event.Event;
 import me.quantiom.eventhandler.event.EventCancellable;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EventHandler {
     private Map<Class<? extends Event>, List<RegisteredMethod>> registeredEvents;
+    private Map<Class<? extends Event>, Set<Class<? extends Event>>> cachedSuperClasses;
 
     public EventHandler() {
         this.registeredEvents = Maps.newHashMap();
+        this.cachedSuperClasses = Maps.newHashMap();
     }
 
     // calls an event
     public void callEvent(Event event) {
         this.registeredEvents.forEach((eventClazz, registeredMethods) -> {
-            this.findSuperClasses(eventClazz, Lists.newArrayList()).forEach(clazz -> callEvent(clazz.cast(event)));
+            this.cachedSuperClasses.get(eventClazz).forEach(clazz -> callEvent(clazz.cast(event)));
 
             registeredMethods.forEach(rm -> {
                 EventListener instance = rm.getListenerInstance();
@@ -73,7 +73,10 @@ public class EventHandler {
                         m.getAnnotation(HandleEvent.class).priorty(),
                         m.getAnnotation(HandleEvent.class).skipIfCancelled()
                 ))
-                .forEach(rm -> this.registeredEvents.computeIfAbsent((Class<? extends Event>)rm.getEvent(), k -> Lists.newArrayList()).add(rm));
+                .forEach(rm -> {
+                    this.cachedSuperClasses.computeIfAbsent((Class<? extends Event>)rm.getEvent(), k -> Sets.newHashSet()).addAll(findSuperClasses((Class<? extends Event>)rm.getEvent(), Lists.newArrayList()));
+                    this.registeredEvents.computeIfAbsent((Class<? extends Event>)rm.getEvent(), k -> Lists.newArrayList()).add(rm);
+                });
 
         // sort once on register
         this.registeredEvents.values().forEach(list -> list.sort(Comparator.comparing(RegisteredMethod::getPriority)));
