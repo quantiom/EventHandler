@@ -1,6 +1,13 @@
 # EventHandler
 A simple and lightweight event handler system made in Java.
 
+### Features
+- Scalable and fast
+- Custom event support
+- Cancellable events
+- Event priorities
+- Event inheritence support (ex: `TestEvent extends TestSuperEvent`, `TestEvent` gets called from the handler and then `TestSuperEvent` will also be called)
+
 #### Event Implementation
 ```java
 public class TestEvent extends Event implements EventCancellable {
