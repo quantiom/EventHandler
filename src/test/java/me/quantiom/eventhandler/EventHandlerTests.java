@@ -84,4 +84,26 @@ public class EventHandlerTests {
         // unregister the listener
         handler.unregisterEvents(listener);
     }
+
+    @Test
+    public void test_cancelTest() {
+        // create the handler and listener instances
+        EventHandler handler = new EventHandler();
+        CancelTest listener = new CancelTest();
+
+        // register the listener
+        handler.registerEvents(listener);
+
+        // make sure the data hasn't been overridden yet
+        Assert.assertEquals("None", listener.getData());
+
+        // call the event
+        handler.callEvent(new TestEvent("Some data"));
+
+        // check if the lowest priority cancelled and highest priority skipped
+        Assert.assertEquals("High priority called", listener.getData());
+
+        // unregister the listener
+        handler.unregisterEvents(listener);
+    }
 }

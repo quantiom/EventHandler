@@ -3,6 +3,7 @@ package me.quantiom.eventhandler;
 import com.google.common.collect.Maps;
 import javafx.util.Pair;
 import me.quantiom.eventhandler.event.Event;
+import me.quantiom.eventhandler.event.EventCancellable;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -33,6 +34,11 @@ public class EventHandler {
 
             if (rm.getEvent().isAssignableFrom(event.getClass())) {
                 try {
+                    // skip if cancelled
+                    if (event instanceof EventCancellable && rm.isSkipIfCancelled() && ((EventCancellable) event).isCancelled()) {
+                        continue;
+                    }
+
                     boolean notAccessible = false;
 
                     if (!rm.getMethod().isAccessible()) {
@@ -56,7 +62,12 @@ public class EventHandler {
                 .filter(m -> m.isAnnotationPresent(HandleEvent.class))
                 .filter(m -> m.getParameterCount() == 1)
                 .filter(m -> Event.class.isAssignableFrom(m.getParameterTypes()[0]))
-                .map(m -> new RegisteredMethod(m, m.getParameterTypes()[0], m.getAnnotation(HandleEvent.class).priorty()))
+                .map(m -> new RegisteredMethod(
+                        m,
+                        m.getParameterTypes()[0],
+                        m.getAnnotation(HandleEvent.class).priorty(),
+                        m.getAnnotation(HandleEvent.class).skipIfCancelled()
+                ))
                 .collect(Collectors.toList());
 
         this.registeredEvents.put(instance, filteredMethods);

@@ -8,11 +8,13 @@ public class RegisteredMethod {
     private Method method;
     private Class<?> event;
     private EventPriority priority;
+    private boolean skipIfCancelled;
 
-    public RegisteredMethod(Method method, Class<?> event, EventPriority priority) {
+    public RegisteredMethod(Method method, Class<?> event, EventPriority priority, boolean skipIfCancelled) {
         this.method = method;
         this.event = event;
         this.priority = priority;
+        this.skipIfCancelled = skipIfCancelled;
     }
 
     public Method getMethod() {
@@ -25,5 +27,9 @@ public class RegisteredMethod {
 
     public EventPriority getPriority() {
         return priority;
+    }
+
+    public boolean isSkipIfCancelled() {
+        return skipIfCancelled;
     }
 }
