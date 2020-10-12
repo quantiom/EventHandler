@@ -1,4 +1,6 @@
 # EventHandler
+![license](https://img.shields.io/github/license/quantiom/EventHandler?color=%23b59e28&style=for-the-badge) ![made-with-java](https://img.shields.io/badge/MADE%20WITH-JAVA-%23b59e28?style=for-the-badge&logo=java)  ![last-commit](https://img.shields.io/github/last-commit/quantiom/EventHandler?color=%23b59e28&style=for-the-badge)  
+
 A simple and lightweight event handler system made in Java.
 
 ### Features
