@@ -1,6 +1,7 @@
 package me.quantiom.eventhandler;
 
 import me.quantiom.eventhandler.event.impl.TestEvent;
+import me.quantiom.eventhandler.event.impl.TestSuperEvent;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -103,6 +104,34 @@ public class EventHandlerTests {
         // check if the lowest priority cancelled and highest priority skipped
         Assert.assertEquals("High priority called", listener.getData());
 
+        // unregister the listener
+        handler.unregisterEvents(listener);
+    }
+
+    @Test
+    public void test_superEventTest() {
+        // create the handler and listener instances
+        EventHandler handler = new EventHandler();
+        SuperEventTest listener = new SuperEventTest();
+
+        // register the listener
+        handler.registerEvents(listener);
+
+        // make sure timesRan is 0
+        Assert.assertEquals(0, listener.getTimesRan());
+
+        // call the TestEvent (subclass)
+        handler.callEvent(new TestEvent("Some data"));
+
+        // check if both the TestEvent and the TestSuperEvent were called (timesRan == 2)
+        Assert.assertEquals(2, listener.getTimesRan());
+
+        // call the TestSuperEvent (superclass)
+        handler.callEvent(new TestSuperEvent("Some data"));
+
+        // check if only the TestSuperEvent was called
+        Assert.assertEquals(3, listener.getTimesRan());
+        
         // unregister the listener
         handler.unregisterEvents(listener);
     }

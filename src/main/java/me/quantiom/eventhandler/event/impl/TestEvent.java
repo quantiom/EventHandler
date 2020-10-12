@@ -1,13 +1,13 @@
 package me.quantiom.eventhandler.event.impl;
 
-import me.quantiom.eventhandler.event.Event;
 import me.quantiom.eventhandler.event.EventCancellable;
 
-public class TestEvent extends Event implements EventCancellable {
+public class TestEvent extends TestSuperEvent implements EventCancellable {
     private String data;
     private boolean isCancelled;
 
     public TestEvent(String data) {
+        super("From TestEvent");
         this.data = data;
     }
 
