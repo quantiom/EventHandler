@@ -33,13 +33,16 @@ public class EventHandler {
 
             if (rm.getEvent().isAssignableFrom(event.getClass())) {
                 try {
+                    boolean notAccessible = false;
+
                     if (!rm.getMethod().isAccessible()) {
                         rm.getMethod().setAccessible(true);
+                        notAccessible = true;
                     }
 
                     rm.getMethod().invoke(instance, event);
 
-                    rm.getMethod().setAccessible(false);
+                    if (notAccessible) rm.getMethod().setAccessible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
