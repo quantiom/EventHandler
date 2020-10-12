@@ -60,4 +60,28 @@ public class EventHandlerTests {
         handler.callEvent(new TestEvent("Some data"));
         Assert.assertEquals(2, listener.getTimesRan());
     }
+
+    @Test
+    public void test_priorityTest() {
+        // create the handler and listener instances
+        EventHandler handler = new EventHandler();
+        PriorityTest listener = new PriorityTest();
+
+        // register the listener
+        handler.registerEvents(listener);
+
+        // make sure the data hasn't been overridden yet
+        Assert.assertEquals("None", listener.getData());
+
+        // call the event
+        handler.callEvent(new TestEvent("Some data"));
+
+        // check if the highest priority was called last
+        Assert.assertEquals("Highest priority called", listener.getData());
+        Assert.assertNotEquals("Normal priority called", listener.getData());
+        Assert.assertNotEquals("Lowest priority called", listener.getData());
+
+        // unregister the listener
+        handler.unregisterEvents(listener);
+    }
 }

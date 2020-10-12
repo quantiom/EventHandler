@@ -1,11 +1,10 @@
 package me.quantiom.eventhandler;
 
 import com.google.common.collect.Maps;
+import javafx.util.Pair;
 import me.quantiom.eventhandler.event.Event;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EventHandler {
@@ -17,23 +16,32 @@ public class EventHandler {
 
     // calls an event
     public void callEvent(Event event) {
+        List<Pair<EventListener, RegisteredMethod>> registeredMethods = new ArrayList<>();
+
+        // add all methods to one list to sort by priority
         for (Map.Entry<EventListener, List<RegisteredMethod>> entry : this.registeredEvents.entrySet()) {
+            entry.getValue().forEach(rm -> registeredMethods.add(new Pair<>(entry.getKey(), rm)));
+        }
+
+        // sort by priority
+        registeredMethods.sort(Comparator.comparing(o -> o.getValue().getPriority()));
+
+        // call each method
+        for (Pair<EventListener, RegisteredMethod> entry : registeredMethods) {
             EventListener instance = entry.getKey();
-            List<RegisteredMethod> registeredMethods = entry.getValue();
+            RegisteredMethod rm = entry.getValue();
 
-            for (RegisteredMethod rm : registeredMethods) {
-                if (rm.getEvent().isAssignableFrom(event.getClass())) {
-                    try {
-                        if (!rm.getMethod().isAccessible()) {
-                            rm.getMethod().setAccessible(true);
-                        }
-
-                        rm.getMethod().invoke(instance, event);
-
-                        rm.getMethod().setAccessible(false);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+            if (rm.getEvent().isAssignableFrom(event.getClass())) {
+                try {
+                    if (!rm.getMethod().isAccessible()) {
+                        rm.getMethod().setAccessible(true);
                     }
+
+                    rm.getMethod().invoke(instance, event);
+
+                    rm.getMethod().setAccessible(false);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
@@ -45,7 +53,7 @@ public class EventHandler {
                 .filter(m -> m.isAnnotationPresent(HandleEvent.class))
                 .filter(m -> m.getParameterCount() == 1)
                 .filter(m -> Event.class.isAssignableFrom(m.getParameterTypes()[0]))
-                .map(m -> new RegisteredMethod(m, m.getParameterTypes()[0]))
+                .map(m -> new RegisteredMethod(m, m.getParameterTypes()[0], m.getAnnotation(HandleEvent.class).priorty()))
                 .collect(Collectors.toList());
 
         this.registeredEvents.put(instance, filteredMethods);

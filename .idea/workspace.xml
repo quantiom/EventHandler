@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33565007-841d-4c5e-95b8-198b10c6f1be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventCancellable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventPriority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/PriorityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,25 +23,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="910">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/PriorityTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="412">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,27 +76,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="578">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding>
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,39 +95,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="5" selection-start-line="5" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="185">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#205#206#0" expanded="true" />
                 <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,14 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/ListenerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="4" selection-start-line="4" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -134,16 +134,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/MultipleHandlersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -158,6 +159,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>new RegisteredMethod</find>
+      <find>new registe</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -167,15 +174,11 @@
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/exception/EventAlreadyRegisteredException.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/EventListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/Event.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisterListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/UnusedEvent.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/TestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/MultipleListenersTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/RunTests.java" />
@@ -183,8 +186,16 @@
         <option value="$PROJECT_DIR$/src/test/java/test/Tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/EventHandlerTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventCancellable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/MultipleHandlersTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventPriority.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/PriorityTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java" />
       </list>
     </option>
   </component>
@@ -212,10 +223,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="454" />
-    <option name="y" value="-21" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="323" />
+    <option name="y" value="114" />
+    <option name="width" value="2486" />
+    <option name="height" value="1112" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -224,7 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,13 +313,14 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602387346695" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602477048347" />
+    <property name="last_opened_file_path" value="D:/DecimateMC - Workspace/DecimateMC Dropbox/DecimateMC - Workspace/Projects/Decimate/DecimateCommons" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -407,7 +418,9 @@
       <updated>1601180371622</updated>
       <workItem from="1601180375951" duration="1078000" />
       <workItem from="1601237393798" duration="164000" />
-      <workItem from="1602381028549" duration="6311000" />
+      <workItem from="1602381028549" duration="7116000" />
+      <workItem from="1602455446803" duration="87000" />
+      <workItem from="1602475457567" duration="1589000" />
     </task>
     <servers />
   </component>
@@ -418,15 +431,39 @@
     <history-entry file="All_in_EventHandler - 2020.10.10 at 23h 30m 47s.xml">
       <configuration name="All in EventHandler" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.11 at 18h 31m 51s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 16m 15s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 17m 49s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 18m 05s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 25m 27s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 28m 48s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 28m 59s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_EventHandler - 2020.10.12 at 00h 30m 34s.xml">
+      <configuration name="All in EventHandler" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7553000" />
+    <option name="totallyTimeSpent" value="10034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15694936" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15871614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -436,7 +473,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32969603" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32969603" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -476,24 +513,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/exception/EventAlreadyRegisteredException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="42" />
-          <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/exception/EventAlreadyRegisteredException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/EventListener.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_241/src.zip!/java/lang/reflect/AccessibleObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -519,13 +540,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/RegisterTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/test/RegisterTests.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runner/Result.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -544,17 +559,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/UnusedEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/UnusedEvent.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="408">
+            <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventCancellable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/EventPriority.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="304">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -565,34 +598,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/ListenerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="120">
+          <caret line="4" selection-start-line="4" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/MultipleHandlersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="5" selection-start-line="5" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -605,76 +621,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="910">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/event/impl/TestEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/HandleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/quantiom/eventhandler/RegisteredMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="578">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/MultipleHandlersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
             <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/ListenerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/PriorityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="412">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/me/quantiom/eventhandler/EventHandlerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="567">
+          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
