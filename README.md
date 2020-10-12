@@ -3,17 +3,27 @@ A simple and lightweight event handler system made in Java.
 
 #### Event Implementation
 ```java
-public class TestEvent extends Event {
+public class TestEvent extends Event implements EventCancellable {
+    private boolean isCancelled;
+    private String data;
+
+    // can be whatever
     public TestEvent(String data) {
         this.data = data;
     }
 
-    @NotNull
-    private String data;
-
-    @NotNull
     public String getData() {
         return data;
+    }
+
+    @Override
+    public boolean isCancelled() {
+        return this.isCancelled;
+    }
+
+    @Override
+    public void setCancelled(boolean cancelled) {
+        this.isCancelled = cancelled;
     }
 }
 ```
