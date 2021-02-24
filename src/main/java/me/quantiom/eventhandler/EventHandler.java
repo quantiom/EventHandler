@@ -70,7 +70,7 @@ public class EventHandler {
                         instance,
                         m,
                         m.getParameterTypes()[0],
-                        m.getAnnotation(HandleEvent.class).priorty(),
+                        m.getAnnotation(HandleEvent.class).priority(),
                         m.getAnnotation(HandleEvent.class).skipIfCancelled()
                 ))
                 .forEach(rm -> {

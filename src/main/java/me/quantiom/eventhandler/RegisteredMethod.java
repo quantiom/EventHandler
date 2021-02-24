@@ -8,10 +8,10 @@ public class RegisteredMethod {
     private EventListener listenerInstance;
     private Method method;
     private Class<?> event;
-    private EventPriority priority;
+    private int priority;
     private boolean skipIfCancelled;
 
-    public RegisteredMethod(EventListener listenerInstance, Method method, Class<?> event, EventPriority priority, boolean skipIfCancelled) {
+    public RegisteredMethod(EventListener listenerInstance, Method method, Class<?> event, int priority, boolean skipIfCancelled) {
         this.listenerInstance = listenerInstance;
         this.method = method;
         this.event = event;
@@ -31,7 +31,7 @@ public class RegisteredMethod {
         return event;
     }
 
-    public EventPriority getPriority() {
+    public int getPriority() {
         return priority;
     }
 
