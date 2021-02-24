@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface HandleEvent {
-    EventPriority priorty() default EventPriority.NORMAL;
+    int priorty() default EventPriority.NORMAL;
     boolean skipIfCancelled() default false;
 }
