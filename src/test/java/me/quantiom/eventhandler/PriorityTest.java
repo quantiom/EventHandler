@@ -10,17 +10,24 @@ public class PriorityTest implements EventListener {
     public void onTestEventLowest(TestEvent event) {
         this.data = "Lowest priority called";
     }
-
+    
+    
+    @HandleEvent(priority = EventPriority.NORMAL)
+    public void onTestEventNormal(TestEvent event) {
+        this.data = "Normal priority called";
+    }
+    
+    
     @HandleEvent(priority = EventPriority.HIGHEST)
     public void onTestEventHighest(TestEvent event) {
         this.data = "Highest priority called";
     }
 
-    @HandleEvent(priority = EventPriority.NORMAL)
-    public void onTestEventNormal(TestEvent event) {
-        this.data = "Normal priority called";
+    @HandleEvent(priority = 128)
+    public void onTestEventCustomHighest(TestEvent event) {
+        this.data = "Custom priority called";
     }
-
+    
     public String getData() {
         return data;
     }

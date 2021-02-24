@@ -78,10 +78,11 @@ public class EventHandlerTests {
         handler.callEvent(new TestEvent("Some data"));
 
         // check if the highest priority was called last
-        Assert.assertEquals("Highest priority called", listener.getData());
-        Assert.assertNotEquals("Normal priority called", listener.getData());
         Assert.assertNotEquals("Lowest priority called", listener.getData());
-
+        Assert.assertNotEquals("Normal priority called", listener.getData());
+        Assert.assertNotEquals("Highest priority called", listener.getData());
+        Assert.assertEquals("Custom priority called", listener.getData());
+        
         // unregister the listener
         handler.unregisterEvents(listener);
     }
